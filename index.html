@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaze Academy - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <h1 class="academy-title">Amaze Academy</h1>
+            <nav class="main-nav">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2 class="hero-title">Welcome to <span>Amaze Academy</span></h2>
+            <p class="hero-subtitle">Your Smart Solution for Student Performance Monitoring</p>
+            <a href="login.html" class="btn btn-hero">Get Started</a>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <div class="container about-flex">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Amaze Academy is a modern educational institution leveraging technology to monitor and enhance student performance. We serve learners from <strong>Grade 1 through Grade 12</strong>, offering a complete pathway from foundational literacy and numeracy to college-preparatory coursework.</p>
+                <p>Our approach blends strong academic standards with personalised learning: we use diagnostic assessments, adaptive learning modules, and teacher-led interventions so every student progresses at the right pace.</p>
+                <!-- <p>Key offerings:</p>
+                <ul>
+                    <li><strong>Comprehensive Curriculum:</strong> Core subjects (Mathematics, Science, Languages, Social Studies) aligned to national standards for all grades.</li>
+                    <li><strong>Supplemental Programs:</strong> STEM labs, coding, language enrichment, arts, and life-skills workshops.</li>
+                    <li><strong>Assessment & Reporting:</strong> Frequent formative assessments, term exams, and parent/teacher dashboards for transparent progress tracking.</li>
+                    <li><strong>Teacher Development:</strong> Regular training and a collaborative planning process to keep instruction effective and engaging.</li>
+                    <li><strong>Student Support:</strong> Remedial classes, counselling, and mentorship to support diverse learning needs.</li>
+                </ul> -->
+                <p>Facilities include modern classrooms, a resource library, computer labs, and safe campus amenities. We also run extracurricular clubs and community projects that build leadership and practical skills.</p>
+                <p>Join Amaze Academy to give students a balanced education that prepares them academically and personally for the future.</p>
+            </div>
+            <!-- about image removed per request -->
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="container contact-flex">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Have questions or want to know more? Reach out to us!</p>
+                <ul>
+                    <li><strong>Email:</strong> info@amazeacademy.com</li>
+                    <li><strong>Phone:</strong> 9043325791</li>
+                    <li><strong>Address:</strong> Church Main Road, Velankanni, Nagapattinam, 611111.</li>
+                </ul>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <h3>Send a Message</h3>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+                <div id="contactMsg" class="success-message"></div>
+            </form>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-block">
+                <div class="footer-brand">Amaze Academy</div>
+                <p class="footer-desc">Empowering students with quality education and holistic development.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="login.html">Login</a>
+                </nav>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Phone: 9043325791</li>
+                    <li>Email: info@amazeacademy.edu</li>
+                    <li>Address: Church Main Road, Velankanni, Nagapattinam, 611111.</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22 12C22 6.48 17.52 2 12 2S2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.89h-2.3V21.9C18.34 21.13 22 17 22 12z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22 5.92c-.63.28-1.3.47-2.01.56.72-.43 1.27-1.12 1.53-1.94-.68.4-1.44.69-2.24.85A3.46 3.46 0 0015.5 4c-1.93 0-3.5 1.66-3.5 3.7 0 .29.03.57.1.84-2.91-.15-5.48-1.6-7.2-3.8-.3.52-.47 1.12-.47 1.76 0 1.22.6 2.3 1.52 2.93-.56-.02-1.09-.18-1.55-.44v.04c0 1.7 1.2 3.13 2.78 3.45-.29.08-.6.12-.92.12-.22 0-.44-.02-.65-.06.44 1.4 1.72 2.42 3.24 2.45A6.98 6.98 0 013 19.54a9.84 9.84 0 005.32 1.56c6.39 0 9.89-5.52 9.89-10.31 0-.16 0-.33-.01-.5.68-.5 1.27-1.12 1.74-1.83-.63.28-1.3.47-2.01.56.73-.44 1.28-1.12 1.54-1.94z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 17.5V10.5H5.67v7h2.67zm-1.33-8.1a1.55 1.55 0 110-3.11 1.55 1.55 0 010 3.11zM18.33 17.5v-3.72c0-2-.62-3.55-2.67-3.55-1.16 0-1.85.78-2.16 1.53v-1.3H10.1c.03.84 0 7 0 7h2.68v-3.9c0-.21.02-.42.08-.57.18-.43.57-.88 1.23-.88.86 0 1.2.66 1.2 1.63v3.72H18.33z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.2a4.8 4.8 0 100 9.6 4.8 4.8 0 000-9.6zM18.5 6.1a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p class="footer-copy">&copy; 2026 Amaze Academy. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/landing.js"></script>
+</body>
+</html>

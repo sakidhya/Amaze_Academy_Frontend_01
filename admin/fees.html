@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Fees - Amaze Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/student.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="academy-title">Amaze Academy</h1>
+            <nav class="main-nav">
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+                <a href="../login.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="admin-dashboard.html">Admin Home</a></li>
+                <li><a href="add-student.html">Add Student</a></li>
+                <li><a href="student-list.html">View Students</a></li>
+                <!-- Manage Attendance link removed from admin sidebar -->
+                <li><a href="fees.html">Manage Fees</a></li>
+            </ul>
+        </aside>
+        <main class="dashboard-main">
+            <h2>Manage Fees</h2>
+            <form id="feesForm">
+                <div class="form-group">
+                    <label for="studentEmail">Student Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                        <option value="Paid">Paid</option>
+                        <option value="Unpaid">Unpaid</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Fees</button>
+                <div id="feesMsg" class="success-message"></div>
+            </form>
+            <h3>Fees Records</h3>
+            <table id="feesTable">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fees rows will be inserted here by JS -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <!-- footer removed for admin pages -->
+</body>
+</html>

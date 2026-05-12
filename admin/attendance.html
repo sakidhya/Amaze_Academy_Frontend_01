@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Attendance - Amaze Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/attendance.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="academy-title">Amaze Academy</h1>
+            <nav class="main-nav">
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+                <a href="../login.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="admin-dashboard.html">Admin Home</a></li>
+                <li><a href="add-student.html">Add Student</a></li>
+                <li><a href="student-list.html">View Students</a></li>
+                <!-- Manage Attendance link removed from admin sidebar -->
+                <li><a href="fees.html">Manage Fees</a></li>
+            </ul>
+        </aside>
+        <main class="dashboard-main">
+            <h2>Manage Attendance</h2>
+            <form id="attendanceForm">
+                <div class="form-group">
+                    <label for="studentEmail">Student Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                        <option value="Present">Present</option>
+                        <option value="Absent">Absent</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Mark Attendance</button>
+                <div id="attendanceMsg" class="success-message"></div>
+            </form>
+            <h3>Attendance Records</h3>
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Attendance rows will be inserted here by JS -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <!-- footer removed for admin pages -->
+</body>
+</html>

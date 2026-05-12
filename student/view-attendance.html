@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance - Amaze Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/attendance.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="academy-title">Amaze Academy</h1>
+            <nav class="main-nav">
+                <a href="student-dashboard.html">Student Dashboard</a>
+                <a href="../login.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="student-dashboard.html">Student Home</a></li>
+                <li><a href="view-attendance.html">View Attendance</a></li>
+                <li><a href="view-marks.html">View Marks</a></li>
+            </ul>
+        </aside>
+        <main class="dashboard-main">
+            <h2>View Attendance</h2>
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Attendance rows will be inserted here by JS -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Amaze Academy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

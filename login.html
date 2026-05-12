@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Amaze Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" id="loginForm">
+            <h2>Login to Amaze Academy</h2>
+            <!-- Step 1: Email -->
+            <div id="step1" class="form-step active">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="off" required>
+                </div>
+                <button type="button" class="btn btn-primary" id="sendOTPBtn">Send OTP</button>
+                <div id="step1Error" class="error-message"></div>
+                <div class="login-extra-links" style="text-align:center; margin-top:18px;">
+                    <a href="forgot-password.html" id="forgotPwdLink">Forgot Password?</a> |
+                    <a href="signup.html" id="signupLink">Sign Up</a>
+                </div>
+            </div>
+            <!-- Step 2: OTP Verification -->
+            <div id="step2" class="form-step" style="display:none;">
+                <div class="form-group">
+                    <label for="otp">Enter OTP</label>
+                    <input type="text" id="otp" name="otp" placeholder="Enter 6-digit OTP" maxlength="6">
+                </div>
+                <button type="button" class="btn btn-primary" id="verifyOTPBtn">Verify OTP</button>
+                <div id="step2Error" class="error-message"></div>
+            </div>
+            <!-- Step 3: Role Selection -->
+            <div id="step3" class="form-step" style="display:none;">
+                <div class="form-group">
+                    <label for="role">Select Your Role</label>
+                    <select id="role" name="role" required>
+                        <option value="">-- Choose Role --</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" id="proceedToPasswordBtn">Next</button>
+                <div id="step3Error" class="error-message"></div>
+            </div>
+            <!-- Step 4: Password -->
+            <div id="step4" class="form-step" style="display:none;">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Enter password" required>
+                        <button type="button" class="password-toggle" id="togglePassword" title="Show/Hide password">
+                            <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+                <div id="step4Error" class="error-message"></div>
+            </div>
+        </form>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

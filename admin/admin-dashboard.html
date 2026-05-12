@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Amaze Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/dashboard.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="academy-title">Amaze Academy</h1>
+            <nav class="main-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="../login.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="admin-dashboard.html">Admin Home</a></li>
+                <li><a href="add-student.html">Add Student</a></li>
+                <li><a href="student-list.html">View Students</a></li>
+                <li><a href="fees.html">Manage Fees</a></li>
+            </ul>
+        </aside>
+        <main class="dashboard-main">
+            <h2>Admin Dashboard</h2>
+            <div class="dashboard-cards">
+                <div class="card" onclick="location.href='add-student.html'">Add Student</div>
+                <div class="card" onclick="location.href='student-list.html'">View Students</div>
+                <!-- Manage Attendance link removed from admin sidebar -->
+                <div class="card" onclick="location.href='fees.html'">Manage Fees</div>
+                <div class="card">Student Performance</div>
+            </div>
+        </main>
+    </div>
+    <!-- footer removed for admin dashboard -->
+</body>
+</html>

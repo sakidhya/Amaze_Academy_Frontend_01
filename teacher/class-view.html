@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class View - Amaze Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script defer src="../js/class.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="academy-title">Amaze Academy</h1>
+            <nav class="main-nav">
+                <a href="teacher-dashboard.html">Teacher Dashboard</a>
+                <a href="../login.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="teacher-dashboard.html">Teacher Home</a></li>
+                <li><a href="mark-attendance.html">Mark Attendance</a></li>
+                <li><a href="student-performance.html">View Student Performance</a></li>
+            </ul>
+        </aside>
+        <main class="dashboard-main">
+            <button id="chatToggleBtn" class="chat-toggle-fab" aria-label="Toggle Chat">Open Chat</button>
+            <h2 id="classTitle">Class</h2>
+
+            <!-- Floating chat toggle placed in top-right via CSS -->
+            <section id="studentsSection">
+                <h3>Students</h3>
+                <div style="margin-bottom: 20px; padding: 15px; background: #1E293B; border-radius: 8px; border: 1px solid #334155;">
+                    <label for="attendanceDateClass" style="display: block; margin-bottom: 10px;">Date</label>
+                    <input type="date" id="attendanceDateClass" required>
+                </div>
+                <table id="classStudentTable">
+                    <thead>
+                        <tr><th>Student</th><th>Actions</th></tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div style="margin-top: 20px; display: flex; gap: 10px;">
+                    <button id="submitAttendanceBtn" class="btn btn-primary" style="padding: 12px 30px;">Submit Attendance</button>
+                    <div id="submitAttendanceMsg" class="success-message"></div>
+                </div>
+
+                <div id="submittedAttendanceContainer" style="margin-top: 30px; display: none;">
+                    <h3>Submitted Attendance Records — <span id="attendanceTableDate">No date selected</span></h3>
+                    <table id="submittedAttendanceTable" style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #334155;">Student Name</th>
+                                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #334155;">Date</th>
+                                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #334155;">Attendance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="chatSection">
+                <div id="chatCard" class="chat-card hidden">
+                    <div class="chat-header">
+                        <h3>Class Chat / Group</h3>
+                        <p>Communicate with students of this class</p>
+                    </div>
+
+                    <div id="chatStatusArea">
+                        <!-- styled online/offline box or info -->
+                        <div id="chatAlert" class="alert-box">
+                            <div class="alert-icon">💬</div>
+                            <div id="chatAlertText">No network — messages are saved locally.</div>
+                        </div>
+                    </div>
+
+                    <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+                    <form id="chatForm" class="composer-row" enctype="multipart/form-data">
+                        <div class="composer-left">
+                            <input type="text" id="chatSender" placeholder="Your name" required />
+                            <input type="text" id="chatMessage" placeholder="Message" />
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                            <label class="file-btn" for="chatFile">Attach</label>
+                            <button type="submit" class="btn-send">Send</button>
+                        </div>
+                        <input type="file" id="chatFile" style="display:none;" />
+                        <div id="selectedFile" style="margin-left:8px;align-self:center;"></div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- footer removed for teacher pages -->
+</body>
+</html>

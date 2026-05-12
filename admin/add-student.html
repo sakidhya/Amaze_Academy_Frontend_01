@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student - Amaze Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/student.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="academy-title">Amaze Academy</h1>
+            <nav class="main-nav">
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+                <a href="../login.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="admin-dashboard.html">Admin Home</a></li>
+                <li><a href="add-student.html">Add Student</a></li>
+                <li><a href="student-list.html">View Students</a></li>
+                <!-- Manage Attendance link removed from admin sidebar -->
+                <li><a href="fees.html">Manage Fees</a></li>
+            </ul>
+        </aside>
+        <main class="dashboard-main">
+            <form id="addStudentForm">
+                <h2>Add Student</h2>
+                <div class="form-group">
+                    <label for="studentName">Name</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentEmail">Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentClass">Class</label>
+                    <input type="text" id="studentClass" name="studentClass" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Student</button>
+                <div id="addStudentMsg" class="success-message"></div>
+            </form>
+        </main>
+    </div>
+    <!-- footer removed for admin pages -->
+</body>
+</html>
